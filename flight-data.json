@@ -35,10 +35,10 @@
       "actual_on": null,
       "actual_in": null,
       "status": "scheduled",
-      "checkedAt": "2026-09-21T22:37:54.561126Z",
+      "checkedAt": "2026-09-21T22:48:47.388188Z",
       "position": null,
       "mapAt": null
     }
   },
-  "estimatedUsageUsd": 0.05
+  "estimatedUsageUsd": 0.055
 }
