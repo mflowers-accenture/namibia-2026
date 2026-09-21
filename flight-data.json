@@ -1,1 +1,44 @@
-{"version":1,"flights":{},"estimatedUsageUsd":0}
+{
+  "version": 1,
+  "flights": {
+    "DL1147": {
+      "scheduled_out": "2026-09-21T16:29:00Z",
+      "scheduled_in": "2026-09-21T18:30:00Z",
+      "estimated_out": "2026-09-21T16:24:00Z",
+      "estimated_in": "2026-09-21T18:14:00Z",
+      "actual_out": "2026-09-21T16:27:00Z",
+      "actual_off": "2026-09-21T16:42:32Z",
+      "actual_on": "2026-09-21T18:05:47Z",
+      "actual_in": "2026-09-21T18:18:00Z",
+      "status": "arrived",
+      "checkedAt": "2026-09-21T22:37:54.561126Z",
+      "position": {
+        "fa_flight_id": "DAL1147-1789791030-fa-875p",
+        "altitude": 10,
+        "altitude_change": "C",
+        "groundspeed": 0,
+        "heading": 90,
+        "latitude": 33.64954,
+        "longitude": -84.42993,
+        "timestamp": "2026-09-21T18:19:01Z",
+        "update_type": "V"
+      },
+      "mapAt": "2026-09-21T22:37:54.561126Z"
+    },
+    "DL210": {
+      "scheduled_out": "2026-09-22T01:00:00Z",
+      "scheduled_in": "2026-09-22T15:50:00Z",
+      "estimated_out": "2026-09-22T01:00:00Z",
+      "estimated_in": "2026-09-22T15:50:09Z",
+      "actual_out": null,
+      "actual_off": null,
+      "actual_on": null,
+      "actual_in": null,
+      "status": "scheduled",
+      "checkedAt": "2026-09-21T22:37:54.561126Z",
+      "position": null,
+      "mapAt": null
+    }
+  },
+  "estimatedUsageUsd": 0.05
+}
