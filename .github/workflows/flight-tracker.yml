@@ -1,0 +1,53 @@
+name: Update family flight tracker
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '2-57/5 * 21,22,24 9 *'
+    - cron: '2-57/5 * 4,5,6 10 *'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: family-flight-tracker
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch trip flight data
+        env:
+          FLIGHTAWARE_API_KEY: ${{ secrets.FLIGHTAWARE_API_KEY }}
+        run: python3 update-flights.py
+      - name: Save public flight data
+        id: save
+        run: |
+          git config user.name 'Family flight tracker'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add flight-data.json
+          for file in flight-map-*.png; do
+            if [ -f "$file" ]; then git add "$file"; fi
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh family flight tracker'
+            git push
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Prepare Pages files
+        if: steps.save.outputs.changed == 'true'
+        run: |
+          mkdir -p public
+          cp *.html flight-data.json public/
+          for file in flight-map-*.png; do
+            if [ -f "$file" ]; then cp "$file" public/; fi
+          done
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.save.outputs.changed == 'true'
+        with:
+          path: public
+      - uses: actions/deploy-pages@v4
+        if: steps.save.outputs.changed == 'true'
