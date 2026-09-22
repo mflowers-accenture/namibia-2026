@@ -29,26 +29,26 @@
       "scheduled_out": "2026-09-22T01:00:00Z",
       "scheduled_in": "2026-09-22T15:50:00Z",
       "estimated_out": "2026-09-22T01:00:00Z",
-      "estimated_in": "2026-09-22T15:58:33Z",
+      "estimated_in": "2026-09-22T15:24:00Z",
       "actual_out": "2026-09-22T00:59:00Z",
       "actual_off": "2026-09-22T01:17:40Z",
-      "actual_on": null,
-      "actual_in": null,
-      "status": "airborne",
-      "checkedAt": "2026-09-22T11:56:28.699100Z",
+      "actual_on": "2026-09-22T15:19:00Z",
+      "actual_in": "2026-09-22T15:20:00Z",
+      "status": "arrived",
+      "checkedAt": "2026-09-22T16:47:08.897009Z",
       "position": {
         "fa_flight_id": "DAL210-1789790902-fa-812p",
-        "altitude": 390,
+        "altitude": 1,
         "altitude_change": "-",
-        "groundspeed": 568,
-        "heading": 117,
-        "latitude": -15.6779,
-        "longitude": -7.72527,
-        "timestamp": "2026-09-22T11:56:10Z",
+        "groundspeed": 0,
+        "heading": 360,
+        "latitude": -33.98015,
+        "longitude": 18.60649,
+        "timestamp": "2026-09-22T16:46:42Z",
         "update_type": "A"
       },
-      "mapAt": "2026-09-22T11:56:28.699100Z"
+      "mapAt": "2026-09-22T16:47:08.897009Z"
     }
   },
-  "estimatedUsageUsd": 0.19
+  "estimatedUsageUsd": 0.235
 }
