@@ -48,7 +48,21 @@
         "update_type": "A"
       },
       "mapAt": "2026-09-22T16:47:08.897009Z"
+    },
+    "4Z326": {
+      "scheduled_out": "2026-09-24T08:40:00Z",
+      "scheduled_in": "2026-09-24T10:50:00Z",
+      "estimated_out": "2026-09-24T08:40:00Z",
+      "estimated_in": "2026-09-24T10:50:00Z",
+      "actual_out": null,
+      "actual_off": null,
+      "actual_on": null,
+      "actual_in": null,
+      "status": "scheduled",
+      "checkedAt": "2026-09-24T04:32:46.764663Z",
+      "position": null,
+      "mapAt": null
     }
   },
-  "estimatedUsageUsd": 0.235
+  "estimatedUsageUsd": 0.24
 }
